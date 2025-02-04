@@ -13,6 +13,9 @@ app.use((err, req, res, next) => {
     res.status(500).send('Something broke!')
 })
 
-app.listen(PORT , () => {
+app.listen(PORT, () => {
     console.log(`Server is running at : http://localhost:${PORT}`)
+}).on('error', (err) => {
+    console.error('Failed to start server:', err.message)
+    process.exit(1)
 })
