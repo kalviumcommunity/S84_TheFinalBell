@@ -1,0 +1,27 @@
+meta {
+  name: POST
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:2524/create
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "userName": "JohnDoe",
+    "title": "My First Blog Post",
+    "content": "This is the content of my blog post.",
+    "email": "johndoe@example.com",
+    "password": "securepassword123",
+    "comment": "This is an example comment."
+  }
+  
+}
