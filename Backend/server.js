@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const postRoutes = require("./route/userRoute")
 require("dotenv").config();
 
 const app = express();
@@ -20,7 +21,7 @@ const db = mongoose.connection;
 
 db.on("connected", () => console.log("MongoDB is connected"));
 db.on("error", (err) => console.error("MongoDB Connection Error:", err));
-
+app.use("/",postRoutes) ;
 
 app.get("/", (req, res) => {
   const status = mongoose.connection.readyState === 1 ? "Connected" : "Not Connected";
@@ -32,6 +33,8 @@ app.get("/ping", (req, res) => {
   res.send("This is Ping Route");
 });
 
+
+app.use("/api/posts" , postRoutes) ;
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
