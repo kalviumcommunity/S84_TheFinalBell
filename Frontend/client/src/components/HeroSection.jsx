@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../assets/hero-image.png"; // Add an image
+import heroImage from "../assets/schooldays.jpg"; // Add an image
 import "./../styles/landing.css";
 
 const HeroSection = () => {
