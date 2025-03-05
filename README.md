@@ -1,9 +1,8 @@
  
-**Milestone4**
+**CRUD_OPERATIONS**
 <br>
-Today I deploy my Project with the help of Render.
-<br>
-Deployed Link : https://s84-thefinalbell.onrender.com
+Perform the CRUD operations and test them using Bruno. <br>
+Paste that folder in docs.bruno also.
  
 
  
