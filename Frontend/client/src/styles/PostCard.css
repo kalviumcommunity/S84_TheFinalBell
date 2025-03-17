@@ -1,0 +1,74 @@
+.post-card {
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  margin: 20px auto;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  border-left: 6px solid #ff6b81;
+  position: relative;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h2 {
+  color: #2c3e50;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.post-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.post-card strong {
+  color: #333;
+}
+
+.post-card small {
+  font-size: 14px;
+  color: #7f8c8d;
+  display: block;
+  margin-top: 10px;
+}
+/* Post Card Hover Effect */
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve Section Title */
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #ff758c;
+  padding-bottom: 5px;
+}
+
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .post-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .post-card {
+    width: 90%;
+  }
+}
