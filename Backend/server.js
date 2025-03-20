@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const postRoutes = require("./route/userRoute")
+const postRoutes = require("./route/userRoute");
+const router = require("./route/userRoute");
+const cors = require("cors") ;
 require("dotenv").config();
 
 const app = express();
 const PORT = 2524;
-
+app.use(cors());
 app.use(express.json());
 
  
@@ -29,12 +31,13 @@ app.get("/", (req, res) => {
 });
 
 
-app.get("/ping", (req, res) => {
-  res.send("This is Ping Route");
-});
+// app.get("/ping", (req, res) => {
+//   res.send("This is Ping Route");
+// });
 
 
 app.use("/api/posts" , postRoutes) ;
+app.use('/api', router)
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
