@@ -1,6 +1,21 @@
 const express = require("express");
 const router = express.Router();
 const PostModel = require("../model/userModel");
+const mongoose  = require("mongoose");
+
+const Badges = ()=>mongoose.connection.db.collection('Badges')
+
+router.get("/badge", async(req,res)=>{
+    try{
+
+        const badges = await Badges().find({}).toArray()
+
+        res.status(201).json({message:"success", Badges:badges})
+    }
+    catch(err){
+        console.log(err)
+    }
+})
 
 router.post("/create", async (req, res) => {
     try {
