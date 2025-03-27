@@ -35,13 +35,10 @@ const Badge = () => {
       <h1 className="title">🏅 Welcome to the Badge Ceremony! 🎉</h1>
       <p className="subtitle">Click on a badge to reveal its description.</p>
 
-      {/* Loading State */}
       {loading && <div className="spinner"></div>}
 
-      {/* Error Message */}
       {error && <p className="error">{error}</p>}
 
-      {/* Badge List */}
       <div className="badge-grid">
         {Array.isArray(badges) &&
           badges.map((badge, index) => (
@@ -58,7 +55,7 @@ const Badge = () => {
           ))}
       </div>
 
-      {/* Internal CSS */}
+
       <style>{`
         .badge-container {
           text-align: center;
