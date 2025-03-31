@@ -10,7 +10,7 @@ const Badge = () => {
   const fetchBadges = async () => {
     try {
       const response = await axios.get("http://localhost:2524/api/badge");
-      setBadges(response.data.Badges);
+      setBadges(response.data.Badges );
       setLoading(false);
     } catch (err) {
       console.error(err);

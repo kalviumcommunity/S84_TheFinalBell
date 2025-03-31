@@ -15,10 +15,6 @@ function App() {
   return (
     <>
       <Header />
-      
-      {/* Add Entity Button - Styled and Positioned */}
-     
-
       <Routes>
         <Route
           path="/"
@@ -36,7 +32,7 @@ function App() {
               border: "none",
               borderRadius: "8px",
               cursor: "pointer",
-              transition: "background 0.3s ease"
+              transition: "background 0.3s ease"  
             }}
             onMouseOver={(e) => e.target.style.backgroundColor = "#16a34a"} // Darker green on hover
             onMouseOut={(e) => e.target.style.backgroundColor = "#22c55e"} // Reset on mouse out
