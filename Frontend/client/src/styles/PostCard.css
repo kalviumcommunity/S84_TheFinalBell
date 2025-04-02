@@ -72,3 +72,42 @@
     width: 90%;
   }
 }
+
+.hero {
+  background-image: url("../assets/vintage5.jpeg"); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Adjust text color for visibility */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Slight shadow for readability */
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.typing-effect {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.cta-button {
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent button */
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
