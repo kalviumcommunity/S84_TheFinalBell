@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import image from "../assets/SchoolDays.png";
+// import image from "../assets/vintage.png";
+// import image from "../assets/vintage2.jpeg"
 import "./../styles/landing.css";
 // import React, { useRef, useEffect } from "react";
 import Globe from "globe.gl";
@@ -33,7 +34,7 @@ const HeroSection = () => {
         <button className="cta-button">Start Your Reflection</button>
       </div>
       <div className="hero-image">
-        <img src={image} alt="Hero" className="floating-image" />
+        {/* <img src={image} alt="Hero" className="floating-image" /> */}
       </div>
     </section>
   );

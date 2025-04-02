@@ -13,7 +13,8 @@ router.get("/badge", async(req,res)=>{
         res.status(201).json({message:"success", Badges:badges})
     }
     catch(err){
-        console.log(err)
+        console.error("Error fetching badges:", err);
+        res.status(500).json({ message: "Internal Server Error" });
     }
 })
 
