@@ -1,0 +1,153 @@
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(
+      45deg,
+      rgba(147, 51, 234, 0.1) 0%,
+      rgba(79, 70, 229, 0.1) 50%,
+      rgba(236, 72, 153, 0.1) 100%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Animated background elements */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50L20 80M50 50L80 20M50 50L20 20M50 50L80 80' stroke='rgba(99, 102, 241, 0.1)' stroke-width='2'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    animation: backgroundFloat 20s linear infinite;
+  }
+  
+  @keyframes backgroundFloat {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+  }
+  
+  .hero-section h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleFloat 3s ease-in-out infinite;
+  }
+  
+  @keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .hero-section p {
+    font-size: 1.5rem;
+    color: #6b7280;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  .hero-section button {
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+  }
+  
+  .hero-section button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+  }
+  
+  .hero-section button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.3);
+  }
+  
+  .hero-section button:hover::before {
+    left: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-section p {
+      font-size: 1.25rem;
+      padding: 0 1rem;
+    }
+  
+    .hero-section button {
+      padding: 0.875rem 2rem;
+      font-size: 1.125rem;
+    }
+  }
+  
+  /* Add floating school-themed elements */
+  .hero-section::after {
+    content: '📚';
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.7;
+    right: 15%;
+    top: 20%;
+  }
+  
+  .hero-section::before {
+    content: '🎓';
+    position: absolute;
+    font-size: 2rem;
+    animation: float 4s ease-in-out infinite;
+    opacity: 0.7;
+    left: 15%;
+    bottom: 20%;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(10deg);
+    }
+  }
+  
+  /* Glass morphism effect for modal */
+  .auth-modal {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  }

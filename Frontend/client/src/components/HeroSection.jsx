@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./../styles/landing.css";
 import Globe from "globe.gl";
 import AuthModal from './AuthModal';
-
+import '../styles/HeroSection.css';
 const HeroSection = () => {
   const fullText = "Reflect, Laugh and PREDICT...";
   const [text, setText] = useState("");
