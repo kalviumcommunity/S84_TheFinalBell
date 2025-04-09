@@ -14,6 +14,54 @@
   position: relative;
 }
 
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.typing-effect {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4338CA;
+  transform: translateY(-2px);
+}
 
 /* Typing Effect with Modern Colors */
 .typing-effect {
