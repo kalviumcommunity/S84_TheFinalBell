@@ -3,11 +3,12 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
-const postRoutes = require("./route/userRoute");
+const postRoutes = require("./route/postRoutes"); // Update this line
 const entityRoutes = require("./route/entityRoutes"); // Added entity routes
-
+const authRoutes = require("./route/authRoutes");
+const userRoutes = require("./route/userRoute")
 const app = express();
-const PORT = process.env.PORT || 2524;
+const PORT = 5000;
 
 // Middleware
 app.use(cors());
@@ -26,8 +27,11 @@ db.on("error", (err) => console.error("❌ MongoDB Connection Error:", err));
 db.once("open", () => console.log("🚀 MongoDB Connection is Live!"));
 
 // Routes
+// Add auth routes
+app.use("/api/user" ,userRoutes)
+app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
-app.use("/api/entities", entityRoutes); // New entity routes
+app.use("/api/entities", entityRoutes);
 
 // Root Route
 app.get("/", (req, res) => {
