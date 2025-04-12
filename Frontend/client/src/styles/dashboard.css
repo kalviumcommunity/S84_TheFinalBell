@@ -1,202 +1,247 @@
+/* Base Dashboard Styling */
 .dashboard {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
-  background-color: #f8f9fa;
+  background: linear-gradient(120deg, #ffe8e8, #e1f0ff, #ffe8e8); /* Vibrant gradient */
+  font-family: 'Poppins', sans-serif;
+  animation: glowBackground 6s infinite alternate;
 }
 
+/* Dashboard Header */
 .dashboard-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .dashboard-header h1 {
-  color: #1a365d;
-  font-size: 2.5rem;
+  color: #ff6b6b;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 2px 20px rgba(255, 107, 107, 0.5); /* Energetic glow */
   margin-bottom: 0.5rem;
+  animation: pulse 2s infinite;
 }
 
+/* Dashboard Content */
 .dashboard-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  gap: 3rem;
 }
 
+/* Create Post Section */
 .create-post-section {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.95), rgba(255, 240, 210, 0.95));
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(255, 190, 108, 0.4);
+  transition: transform 0.3s ease-in-out;
 }
 
+.create-post-section:hover {
+  transform: translateY(-10px);
+}
+
+/* Post Form */
 .post-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.post-input, .post-textarea {
+.post-input,
+.post-textarea {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #ffd6d6, #ffecd2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.post-input:focus,
+.post-textarea:focus {
+  box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4); /* Warm focus effect */
 }
 
 .post-textarea {
-  min-height: 150px;
-  resize: vertical;
+  min-height: 200px;
+  resize: none;
 }
 
+/* Post Button */
 .post-button {
-  background-color: #4F46E5;
+  background: linear-gradient(90deg, #6b6bff, #ff6b6b);
   color: white;
-  padding: 0.8rem;
+  padding: 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(107, 107, 255, 0.4);
+  transition: all 0.4s ease;
 }
 
 .post-button:hover {
-  background-color: #4338CA;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(107, 107, 255, 0.6);
 }
 
+/* Posts Feed Section */
 .posts-feed {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(210, 246, 255, 0.9));
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 173, 240, 0.4);
 }
 
+.posts-feed:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 173, 240, 0.6);
+}
+
+/* Posts Grid */
 .posts-grid {
   display: grid;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 2rem;
 }
 
+/* Individual Post Card */
 .post-card {
-  background: white;
+  background: linear-gradient(to right, #fff0f0, #fdfde6);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
 }
 
-.post-meta {
-  color: #666;
-  font-size: 0.9em;
-  margin: 10px 0;
+.post-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(255, 99, 99, 0.4);
 }
 
-.post-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
+/* Animations */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(255, 107, 107, 1);
+  }
 }
 
-.post-actions button {
-  padding: 8px 15px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  background: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
+@keyframes glowBackground {
+  0% {
+    background: linear-gradient(120deg, #ffe8e8, #e1f0ff);
+  }
+  100% {
+    background: linear-gradient(120deg, #ffd6d6, #d2f6ff);
+  }
 }
 
-.post-actions button:hover {
-  background: #f5f5f5;
-}
-
-.like-button.liked {
-  color: red;
-  border-color: red;
-}
-
-.comments-section {
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: 1px solid #eee;
-}
-
-.comment {
-  padding: 8px 0;
-  border-bottom: 1px solid #f5f5f5;
-}
-
-.error-message {
-  background: #fee2e2;
-  color: #dc2626;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.post-card h3 {
-  color: #1a365d;
-  margin-bottom: 0.5rem;
-}
-
-.post-actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.post-actions button {
-  background: none;
-  border: 1px solid #ddd;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.post-actions button:hover {
-  background: #f3f4f6;
-}
-
-.post-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.delete-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  padding: 5px;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-
-.delete-button:hover {
-  background-color: #fee2e2;
-}
-
-.add-entity-button {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 100;
-}
-
-.add-entity-button .primary-button {
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  background-color: #4F46E5;
+/* Logout Button */
+.logout-button {
+  background: linear-gradient(90deg, #ff6b6b, #ffca7a); /* Vibrant gradient */
   color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
   border: none;
+  border-radius: 50px; /* Rounded design for elegance */
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4); /* Soft glow effect */
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
 }
 
-.add-entity-button .primary-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+.logout-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.6);
+}
+
+.logout-button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translate(-50%, -50%) scale(0.1);
+  z-index: 0;
+}
+
+.logout-button:hover:before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.logout-button span {
+  position: relative;
+  z-index: 1; /* Ensures text is above the glow */
+}
+
+@keyframes buttonGlow {
+  0% {
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+  }
+  50% {
+    box-shadow: 0 6px 15px rgba(255, 107, 107, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+  }
+}
+
+/* Creative Background Styling */
+.extra-space {
+  background: linear-gradient(120deg, #ffca7a, #ff6b6b, #85e3ff);
+  animation: backgroundMove 6s infinite alternate;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* Add Floating Elements */
+.extra-space::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #ff6b6b, transparent);
+  border-radius: 50%;
+  animation: float 8s infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
 }
