@@ -105,7 +105,7 @@ const Dashboard = () => {
           {error && <div className="error-message">{error}</div>}
           <form onSubmit={handleSubmit} className="post-form">
             <input
-              type="text"
+              type="text"  
               placeholder="Title of your memory..."
               value={newPost.title}
               onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
