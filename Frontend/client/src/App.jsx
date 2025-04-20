@@ -8,7 +8,8 @@ import PostList from "./components/PostList";
 import AddEntity from "./components/AddEntity";
 import UpdateEntity from "./components/UpdateEntity";
 import Dashboard from "./components/Dashboard";
-
+import Contact from "./components/Contact";
+import FeatureGallery from "./components/FeatureGallery";
 import "./styles/global.css";
 
 function App() {
@@ -55,7 +56,9 @@ function App() {
         />
         <Route path="/add-entity" element={<AddEntity />} />
         <Route path="/update/:id" element={<UpdateEntity />} />
-        <Route path="/dashboard" element={<Dashboard />} /> {/* ✅ Dashboard */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/features" element={<FeatureGallery />} />
       </Routes>
       <Footer />
     </>
