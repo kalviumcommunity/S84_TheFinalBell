@@ -8,7 +8,7 @@ const FeatureGallery = () => {
   const [selectedUser, setSelectedUser] = useState("");
   const [newUser, setNewUser] = useState("");
   const [newPhotoUrl, setNewPhotoUrl] = useState("");
-  const [photoUser, setPhotoUser] = useState("");
+  // const [photoUser, setPhotoUser] = useState("");
   const [successMessage, setSuccessMessage] = useState(""); // Add state for success message
 
   const BASE_URL = "http://localhost:5000/api/mysql";
