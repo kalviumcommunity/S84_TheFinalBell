@@ -96,7 +96,7 @@ const Dashboard = () => {
       <div className="dashboard-header">
         <h1>Welcome to The Final Bell</h1>
         <p>Share your school memories and connect with classmates</p>
-        <button onClick={logout} className="logout-button">Logout</button>
+        <button   onClick={()=>(navigate("/"))} className="logout-button">Logout</button>
       </div>
 
       <div className="dashboard-content">
@@ -105,7 +105,7 @@ const Dashboard = () => {
           {error && <div className="error-message">{error}</div>}
           <form onSubmit={handleSubmit} className="post-form">
             <input
-              type="text"
+              type="text"  
               placeholder="Title of your memory..."
               value={newPost.title}
               onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
