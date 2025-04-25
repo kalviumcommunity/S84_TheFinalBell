@@ -9,7 +9,9 @@ const entityRoutes = require("./route/entityRoutes");
 const authRoutes = require("./route/authRoutes");
 const userRoutes = require("./route/userRoute");
 const mysqlRoutes = require("./route/mysqlRoute");
+const cookieParser = require("cookie-parser") ;
 const app = express();
+app.use(cookieParser()) ;
 
 // Serve images from the 'uploads' folder
 app.use('/uploads', express.static('uploads'));
