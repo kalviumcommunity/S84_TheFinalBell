@@ -16,6 +16,7 @@
     "cookie-parser": "^1.4.7",
     "framer-motion": "^12.6.2",
     "globe.gl": "^2.41.3",
+    "jsonwebtoken": "^9.0.2",
     "motion": "^12.6.2",
     "mysql2": "^3.14.0",
     "react": "^19.0.0",
