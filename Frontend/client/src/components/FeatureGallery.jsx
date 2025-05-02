@@ -93,7 +93,6 @@ const FeatureGallery = () => {
     <div className="feature-gallery-container">
       <h1 className="feature-gallery-header">Feature Gallery</h1>
 
-      {/* Display success message */}
       {successMessage && <p className="success-message">{successMessage}</p>}
 
       <div className="feature-filters">
