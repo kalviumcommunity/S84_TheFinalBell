@@ -4,6 +4,9 @@
 
 ---
 
+Check out the chaos and creativity in action:  
+🔗 [The Final Bell – Live Site](https://inquisitive-belekoy-acd917.netlify.app/)
+
 ## 📖 What is The Final Bell?
 
 Imagine a place where the last day of school isn't just about awkward goodbyes, sweaty shirts full of signatures, and crying in the bathroom (happy tears, of course). **The Final Bell** is an interactive, chaotic, and hilarious web platform where students log their:
